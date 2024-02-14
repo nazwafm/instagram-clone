@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Instagram - Clone coding</title>  
+
+    <style>
+      @import url('css/default.css');
+      @import url('css/feed.css');
+
+       
+      </style>
+      <script>
+        let is_liked = true;
+    
+        function like() {
+          if (is_liked == true) {
+            $('#heart').attr('src', 'image/icons/12.png')
+            is_liked = false;
+          } else {
+            $('#heart').attr('src', 'image/icons/5.png')
+            is_liked = true;
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <li class="flex-row"><img width="102" src="image/logo_instagram.png"></li>
+            <li class="flex-row sidebar-content"><img src="image/icons/1.png">
+                <p class="bold">Home</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/11.png">
+                <p>Search</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/4.png">
+                <p>Explore</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/14.png">
+                <p>Reels</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/15.png">
+                <p>Messages</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/5.png">
+                <p>Notifications</p>
+            </li>
+            <li class="flex-row sidebar-content"><img src="image/icons/3.png">
+                <p>Create</p>
+            </li>
+            <li class="flex-row sidebar-content"><img width="32" src="image/profile/profile.png">
+                <p>Profile</p>
+            </li>
+            <li class="flex-row bawah-content"><img src="image/icons/16.png">
+                <p>More</p>
+            </li>
+        </div>
+        <div class="wrapper">
+            <div class="tengah flex-col">
+                <div class="status-wrapper">
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="https://yt3.googleusercontent.com/tNdN1eyJNtNG0FQeFa9oUYaMTrw9Wf-AFGYw6WyphPs1m4kuvF9nSBULiKocEjyfjrXvuilF_g=s900-c-k-c0x00ffffff-no-rj"></div>
+                        <p class="username">LearningX</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/gojo satotru.jpg"></div>
+                        <p class="username">MangGojo_S</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/cedric.jpg"></div>
+                        <p class="username">Mr.Diggory</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/zoro.jpg"></div>
+                        <p class="username">Zoro_yontoryu</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/SICANTIK CAKEP.jpg">
+                        </div>
+                        <p class="username">Emma Waston</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/pacar nazwa.jpg"></div>
+                        <p class="username">SanjiVins</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/pacar 2.jpg"></div>
+                        <p class="username">Shunsukecos</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="image/follower/pacar 3.jpg"></div>
+                        <p class="username">Tom Holland</p>
+                    </div>
+                    <div class="status-card">
+                        <div class="profile-pic"><img width="32" src="https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc"></div>
+                        <p class="username">Spotify</p>
+                    </div>
+                </div>
+                <div class="feed flex-col">
+                    <div class="profile flex-row">
+                        <div class="img-wrap"><img width="32" src="https://i.etsystatic.com/34327129/r/il/6fb10d/3683486012/il_570xN.3683486012_r4yp.jpg"></div>
+                        <p class="flex-col"><span>The Beatlemaniacs</span><span>Liverpool, Britania Raya</span></p><img
+                            width="20" src="image/icons/7.png">
+                    </div>
+                    <div class="imgs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/10/06/2327189880.jpg" style="width: 650px"></div>
+                            <div class="swiper-slide"><img src="https://www.billboard.com/wp-content/uploads/media/reg-presley-obit-troggs-650-430.jpg" style="width: 650px"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="feed-icons flex-row">
+                        <img id="heart" onclick="like()" src="image/icons/5.png" alt="">
+                        <img src="image/icons/9.png" alt="">
+                        <img src="image/icons/2.png" alt="">
+                        <img src="image/icons/10.png" alt="">
+                    </div>
+                    <div class="likes">9,999 likes</div>
+                    <div class="comments">
+                        <span class="title">The Beatlemaniacs</span>
+                        Our Legend
+                        <span class="hashtag">#TheBeatles #Beatlemaniacs</span>
+                    </div>
+                    <div class="count">View all 169 comments</div>
+                    <div class="commentar">
+                        <div class="comment-box flex-row"><input type="text" placeholder="Add a comment.."></div>
+                        <div class="imgs emoji-icons"><img src="image/icons/17.png"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="account">
+                <div class="account-content">
+                    <li class="flex-row">
+                        <div class="img-wrap"><img width="56" src="image/profile/profile.png"></div>
+                        <p class="flex-col"><span>Nazwamaulana_</span><span>Nazwa</span></p><a href="#">Switch</a>
+                    </li>
+                    <li class="flex-row suggestion"><span>Suggestions for you</span><a href="#">See All</a></li>
+                    <li class="flex-row friends">
+                        <div class="img-wrap"><img width="32" src="https://images.genius.com/e913b9ecb8fcf5e2b4f5811258a7aa71.1000x1000x1.jpg"></div>
+                        <p class="flex-col"><span>nkcthi</span><span>Followed by SanjiVins + 7 more</span></p><a
+                            href="#">Follow</a>
+                    </li>
+                    <li class="flex-row friends">
+                        <div class="img-wrap"><img width="32" src="image/follower/follower_levi.jpg"></div>
+                        <p class="flex-col"><span>Ackerman_Levi</span><span>Followed by Zoro_yontoryu + 7 more</span></p><a
+                            href="#">Follow</a>
+                    </li>
+                    <li class="flex-row friends">
+                        <div class="img-wrap"><img width="32" src="https://cdn1-production-images-kly.akamaized.net/R_gkmcdJHdQTSpNCegn6iDVohh4=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1090596/original/6be0635ea79ca981f7797f84fbac3c1ay_wide-bfaafef77349a2c9101d90e3eabe182a7fd1875f.jpg"></div>
+                        <p class="flex-col"><span>MrBean_xyxyx</span><span>Followed by Mr.Diggory + 3 more</span></p>
+                        <a href="#">Follow</a>
+                    </li>
+                    <li class="flex-row friends">
+                        <div class="img-wrap"><img width="32" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUz3rpcpWneZmFzhOcMa3eERASsO10oBNLlQ&usqp=CAU"></div>
+                        <p class="flex-col"><span>itsTonyshark</span><span>Followed by SanjiVins + 7 more</span></p><a
+                            href="#">Follow</a>
+                    </li>
+                </div>
+                <div class="about"><a href="#">About</a><a href="#">Help</a><a href="#">Press</a><a href="#">API</a><a
+                        href="#">Jobs</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Locations</a><a
+                        href="#">Language</a><a href="#">Meta Verified</a></div>
+                <div class="name">© 2023 INSTAGRAM FROM META</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+    
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+    
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+</body>
+
+</html>
